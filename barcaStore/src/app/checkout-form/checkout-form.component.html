@@ -1,0 +1,85 @@
+<div class="checkout-form">
+  <div class="checkout-detail">
+    <div class="user-info">
+      <form (ngSubmit)="form_submit()" #form="ngForm">
+        <div class="full-name">
+          <span>Full Name</span>
+          <input
+            type="text"
+            name="name"
+            minlength="3"
+            required
+            placeholder="(minimum 3 characters)"
+            class="form-control"
+            [(ngModel)]="name"
+            #fName="ngModel"
+          />
+          <div *ngIf="fName.invalid && fName.dirty" class="input-error">
+            <div *ngIf="fName.errors?.['required']">
+              Full Name cannot be empty.
+            </div>
+            <div *ngIf="fName.errors?.['minlength']">
+              Full name must be at least 3 characters.
+            </div>
+          </div>
+        </div>
+        <div class="address-info">
+          <span>Address</span>
+          <input
+            type="text"
+            name="address"
+            minlength="6"
+            placeholder="(minimum 6 characters)"
+            class="form-control"
+            required
+            #customerAddress="ngModel"
+            [(ngModel)]="address"
+          />
+          <div *ngIf="customerAddress.invalid && customerAddress.dirty" class="input-error">
+            <div *ngIf="customerAddress.errors?.['required']">
+              Address cannot be empty.
+            </div>
+            <div *ngIf="customerAddress.errors?.['minlength']">
+              Address must be at least 6 characters.
+            </div>
+          </div>
+        </div>
+        <div class="card_no">
+          <span>Credit Card Number</span>
+          <input
+            type="text"
+            name="card_number"
+            minlength="16"
+            maxlength="16"
+            pattern="^[0-9]+$"
+            placeholder="(16-digit-number)"
+            class="form-control"
+            required="required"
+            [(ngModel)]="card_number"
+            #cardNumber="ngModel"
+          />
+          <div *ngIf="cardNumber.invalid && cardNumber.dirty" class="input-error">
+            <div *ngIf="cardNumber.errors?.['required']">
+              Credit Card Number cannot be empty.
+            </div>
+            <div *ngIf="cardNumber.errors?.['minlength']">
+              Credit Card Number must be at least 16 characters.
+            </div>
+            <div *ngIf="cardNumber.errors?.['pattern']">
+              Credit Card Number must contain digits only.
+            </div>
+          </div>
+        </div>
+        <p class="client-note">
+          We'll never share your payment details with anyone else.
+        </p>
+        <input
+          type="submit"
+          [disabled]="form.invalid"
+          value="Submit Order"
+          class="mr-10 mt-10 pt-2 flex-none h-10 w-full px-6 font-bold rounded-md bg-black text-white button"
+        />
+      </form>
+    </div>
+  </div>
+</div>

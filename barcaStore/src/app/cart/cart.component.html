@@ -1,0 +1,78 @@
+<div class="container">
+  <div class="cart">
+    <div class="cart-details" *ngIf="orderTotal !== 0">
+      <div class="cart-info">
+        <div class="item-detail" *ngFor="let item of items; let index = index">
+          <img src="{{ item.url }}" alt="" />
+          <div class="item-info">
+            <h4 class="item-name">{{ item.name }}</h4>
+            <p class="item-price">${{ item.price }}</p>
+            <form>
+              Amt:
+              <input
+                class="form-control number-input"
+                required
+                min="0"
+                [ariaValueMin]="1"
+                name="quantity{{ index }}"
+                [(ngModel)]="items[index].quantity"
+                (ngModelChange)="update_quantity($event, item)"
+                type="number"
+              />
+            </form>
+            <p class="sub-total">
+              SubTotal: ${{ item.totalAmount?.toFixed(2) }}
+            </p>
+          </div>
+          <input
+            type="button"
+            value="Remove"
+            class="btn btn-danger"
+            (click)="remove_from_cart(item)"
+          />
+        </div>
+      </div>
+      <div class="checkout-info">
+        <div class="total-amount">
+          <div class="order-total">
+            <span class="span-total">Total:</span>
+            <span>${{ orderTotal.toFixed(2) }}</span>
+          </div>
+          <div class="btn-back">
+            <a routerLink="" class="btn btn-secondary">
+              <span aria-hidden="true"> &larr;</span>
+              Continue Shopping
+            </a>
+          </div>
+        </div>
+        <app-checkout-form [orderTotal]="orderTotal"></app-checkout-form>
+      </div>
+    </div>
+    <div class="empty-cart-message" *ngIf="orderTotal === 0">
+      <div class="cart-message">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="40"
+          height="40"
+          fill="currentColor"
+          class="bi bi-cart-x"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M7.354 5.646a.5.5 0 1 0-.708.708L7.793 7.5 6.646 8.646a.5.5 0 1 0 .708.708L8.5 8.207l1.146 1.147a.5.5 0 0 0 .708-.708L9.207 7.5l1.147-1.146a.5.5 0 0 0-.708-.708L8.5 6.793 7.354 5.646z"
+          />
+          <path
+            d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"
+          />
+        </svg>
+        <p>Your Cart is empty add more items to the cart</p>
+        <p class="text-center pt-2">
+          <a routerLink="" class="btn btn-secondary">
+            <span aria-hidden="true"> &larr;</span>
+            Back To Shopping
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

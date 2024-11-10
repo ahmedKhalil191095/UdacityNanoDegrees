@@ -1,0 +1,167 @@
+/* img {
+    width: 100px;
+    border-radius: 10px;
+  }
+
+  .form-margin {
+    margin-bottom: 12px;
+  }
+
+  .cart-item {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+
+  .cart-item-details {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: left;
+    margin-left: 80px;
+  }
+
+  .number-input {
+    width: 80px;
+    text-align: center;
+  }
+
+  .cart-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 64px;
+  }
+
+  .cart-panel {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .
+  } */
+.empty-cart-message {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  color: #a35e5e;
+  font-style: italic;
+}
+
+.number-input {
+  width: 80px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.cart {
+  margin-top: 40px;
+  font-family: roboto;
+  width: 80%;
+}
+
+.cart-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.cart-info {
+  width: 50%;
+  margin-top: 40px;
+}
+
+.checkout-info {
+  width: 45%;
+  position: absolute;
+  right: 20px;
+  top: 40px;
+  border: 1px solid rgb(237, 237, 240);
+  padding: 20px;
+}
+
+.item-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  border: 1px solid rgb(237, 237, 240);
+  padding: 10px;
+}
+
+.item-detail img {
+  width: 120px;
+  border-radius: 10px;
+}
+
+.form-control {
+  padding: 0.5em;
+  width: 50%;
+  font-size: 0.8em;
+  border-radius: 5px;
+}
+
+.item-name {
+  font-weight: 400;
+
+}
+
+.sub-total {
+  padding-top: 10px;
+  font-weight: 500;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+}
+
+.total-amount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 15px;
+
+  color: #fff;
+  font-weight: 500;
+}
+
+.order-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #E91E63;
+  border-radius: 5px;
+  gap: 10px;
+}
+
+.cart-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-message p {
+  padding: 10px;
+}
+
+.total-amount {
+  gap: 10px;
+}
+
+.span-total {
+  font-family: 500;
+}

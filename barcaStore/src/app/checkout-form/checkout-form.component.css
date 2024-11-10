@@ -1,0 +1,57 @@
+.checkout-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 10px;
+    font-family: roboto;
+}
+
+.checkout-detail {
+    width: 100%;
+    padding: 1em;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-control {
+    margin-bottom: 1em;
+    padding: 0.5em;
+    width: 100%;
+    font-size: 0.8em;
+    border-radius: 5px;
+}
+
+.button {
+    align-self: start;
+    border-radius: 5px;
+}
+
+form div {
+    width: 100%;
+  }
+
+  .client-note {
+    font-size: .8em;
+    color: grey;
+    font-style: italic;
+  }
+
+  .input-error {
+    font-size: 0.8em;
+    font-style: italic;
+    color: rgb(196, 47, 47);
+    padding: 2px;
+  }

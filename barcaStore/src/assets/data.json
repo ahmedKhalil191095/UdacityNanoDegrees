@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Black T-Shirt",
+    "price": 150.00,
+    "url": "https://shopthearena.com/cdn/shop/files/FCB123MP002-Front_1200x.jpg?v=1717755617",
+    "description": "WTF!"
+  },
+  {
+    "id": 2,
+    "name": "Black Gold T-shirt",
+    "price": 249.99,
+    "url": "https://www.stadionshop.com/media/catalog/product/mpiowebpcache/fd302db831d84e01b233adebca57abd7/4/4/44984-44985-44986-44987-44988-s6231-fc-barcelona-barca-gold-polo-majica-1a.webp",
+    "description": "WTF!"
+  },
+  {
+    "id": 3,
+    "name": "Barca T-shirt 2019",
+    "price": 79.99,
+    "url": "https://5.imimg.com/data5/JB/VW/DV/SELLER-98321778/fc-barcelona-t-shirt-1000x1000.png",
+    "description": "just imagine it!"
+  },
+  {
+    "id": 4,
+    "name": "Barca",
+    "price": 129.99,
+    "url": "https://m.media-amazon.com/images/I/41SpntpDwGL._AC_SY580_.jpg",
+    "description": "WTF!"
+  },
+  {
+    "id": 5,
+    "name": "Barca T-shirt 2022",
+    "price": 79.99,
+    "url": "https://theshoppies.pk/wp-content/uploads/2023/06/Barcelona-FC-Home-Jersey-2023-24.jpg",
+    "description": "WTF!"
+  },
+  {
+    "id": 6,
+    "name": "Barca T-shirt 2023",
+    "price": 79.99,
+    "url": "https://www.shutterstock.com/image-vector/realistic-soccer-shirt-barcelona-jersey-600nw-2205008201.jpg",
+    "description": "WTF!"
+  }
+]
