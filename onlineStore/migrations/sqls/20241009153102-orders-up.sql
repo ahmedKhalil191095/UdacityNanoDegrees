@@ -1,0 +1,5 @@
+CREATE TABLE orders (
+    id SERIAL PRIMARY KEY,
+    userId VARCHAR(255) NOT NULL,
+    status VARCHAR(255) NOT NULL
+);
