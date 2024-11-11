@@ -7,7 +7,7 @@ orbs:
 jobs:
   build-and-deploy:
     docker:
-      - image: circleci/node:22
+      - image: 'cimg/base:stable'
     steps:
       - node/install
       - checkout
@@ -17,6 +17,7 @@ jobs:
           name: Front-End Install
           command: |
             npm run frontend:install
+            npm install webpack@latest --save-dev
       # - run:
       #     name: Front-End Tests
       #     command: |
