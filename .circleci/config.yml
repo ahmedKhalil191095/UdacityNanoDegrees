@@ -31,27 +31,27 @@ jobs:
       - run:
           name: Front-End Build
           command: |
-           echo "TODO: Install dependencies in the the backend API  "
+            NODE_OPTIONS=--openssl-legacy-provider npm run frontend:build
 # Deploying the frontend to AWS S3
       - run:
           name: Front-End Deploy
           command: |
-            NODE_OPTIONS=--openssl-legacy-provider npm run frontend:deploy
+            npm run frontend:deploy
 # Installing the Backend dependencies
       - run:
           name: Back-End Install
           command: |
-            npm run backend:install
+            npm run api:install
 # Changing the main entry point in package.json for the Backend
-      - run:
-          name: Back-End Change Main Entry Point
-          command: |
-            npm run backend:change-main
+      # - run:
+      #     name: Back-End Change Main Entry Point
+      #     command: |
+      #       npm run backend:change-main
 # Building the backend
       - run:
           name: Back-End Build
           command: |
-            npm run backend:build
+            npm run api:build
 # Installing AWS Elastic Beanstalk CLI
       - run:
           name: Installing AWS Elasticbeanstalk
@@ -61,7 +61,7 @@ jobs:
       - run:
           name: Back-End Deploy
           command: |
-            npm run backend:deploy
+            npm run api:deploy
 
 workflows:
   build-and-deploy:
