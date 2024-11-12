@@ -10,7 +10,7 @@ The project can run but is missing some information to connect to the database a
 
 Project Setup: 
 
-1- Clone the project - git clone https://github.com/Storm-Maker/Hosting-Fullstack-AWS.git
+1- Clone the project - git clone -b master https://github.com/ahmedKhalil191095/JaveScriptNanoDegree.git --single-branch
 2- Go into the project directory - cd udagram-frontend
 3- Install the dependencies - npm install
 4- Start the frontend - npm run start
