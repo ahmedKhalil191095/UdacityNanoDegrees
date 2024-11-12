@@ -12,6 +12,7 @@
     "tsc": "npx tsc",
     "dev": "npx ts-node-dev --respawn --transpile-only src/server.ts",
     "prod": "npx tsc && node ./www/server.js",
+    "aws-eb": "chmod +x bin/aws-eb.sh && bin/aws-eb.sh",
     "clean": "rm -rf www/ || true",
     "deploy": "npm run build && eb list && eb use udagram-api-dev && eb deploy",
     "build": "npm install . && npm run clean && tsc && cp -rf src/config www/config && cp -R .elasticbeanstalk www/.elasticbeanstalk && cp .npmrc www/.npmrc && cp package.json www/package.json && cd www && 7z a -r Archive.zip . && cd ..",
