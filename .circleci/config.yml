@@ -57,6 +57,16 @@ jobs:
           name: Installing AWS Elasticbeanstalk
           command: |
             npm run backend:aws-eb
+
+      - run:
+          name: Initialize Elastic Beanstalk
+          command: |
+            eb init -p node.js udagram-api \
+              --region us-east-1 \
+              --platform node.js
+              
+            # Set the default environment
+            eb use Udagram-api-env
       - run:
           name: Seting Environment Variables in Elastic BeanstalkUsing eb setenv commaned
           command: |
