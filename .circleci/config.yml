@@ -16,7 +16,7 @@ jobs:
       - run:
           name: Front-End Install
           command: |
-            npm run frontend:install
+            NODE_OPTIONS=--openssl-legacy-provider npm run frontend:install
       # - run:
       #     name: Front-End Tests
       #     command: |
